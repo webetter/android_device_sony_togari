@@ -13,20 +13,22 @@
 # limitations under the License.
 
 # inherit from the common rhine definitions
--include device/sony/rhine-common/BoardConfigCommon.mk
+include device/sony/rhine-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
-#-include vendor/sony/togari/BoardConfigVendor.mk
+#-include vendor/sony/honami/BoardConfigVendor.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := C6802,C6806,C6833,C6843,togari
+
+TARGET_BOOTLOADER_BOARD_NAME := C6833
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/togari/include
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/togari/bluetooth
 
 # Kernel properties
-TARGET_KERNEL_CONFIG := cm_rhine_togari_row_defconfig
+TARGET_KERNEL_CONFIG := lineageos_rhine_togari_row_defconfig
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 26
